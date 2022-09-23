@@ -1,0 +1,101 @@
+There are 2 types of files:
+1.Byte/Stream oriented
+2.Character Oriented
+
+Byte-oriented: 	read=> FileInputStream(byte,character)
+				write=>FileOutputStream
+				
+Character-oriented: 	read	=>	FileReader (character)
+						write	=>	FileWriter
+
+java.io.*
+
+Stream:
+- Stream is a sequence of data. And it is composed of bytes.
+- 3 streams are created for us automatically
+		1.System.out	2.System.in		3.System.err
+		
+OutputStream : write data to a destination
+InputStream : read data from a source
+
+OutputStream class : 
+- it is an abstract class
+- it is super class of all the classes representing an output stream of bytes.
+Methods:
+1.public void write(int)throws IOException
+2.public void write(byte[])throws IOException
+3.public void flush() throws IOException
+4.public void close() throws IOException
+
+InputStream class:
+- it is an abstract class.
+- it is super class of all the classes representing an input stream of bytes
+Methods:
+1.public abstract int read() throws IOException: it reads next byte of data and returns -1 at the end of the file
+2.public int available() throws IOException:
+3.public void close() throws IOException
+
+
+Serialization: 
+- It is a mechanism of writing the state of an object into a byte stream
+- It is mainly used to travel object's state on the network
+
+- reverse operation of Serialization is called Deserialization
+
+java.io.Serializable interface:
+- it is a marker interface(has no data member and method)
+- it is used to mark java classes so that object of these classes may get certain capability.
+- it must be implemented by the class whose object you want to persist.
+- String class and all the wrapper classes implements Serializable interface by default.
+- Cloneable and Remote are marker interfaces
+
+ObjectOutputStream class:
+- used to write primitive data types and java objects to an OutputStream
+- only objects that supports Serializable interface can be written to a stream.
+Methods:
+1.public final void writeObject(Object obj)throws IOException: write object to the ObjectOutputStream
+2.public void flush()throws IOException
+3.public void close()throws IOException
+
+Deserialization:
+- it is the process of reconstructing the object from the serialized state
+
+ObjectInputStream class:
+- it deserializes objects and primitive data written using ObjectOutputStream
+Methods:
+1.public final Object readObject()throws IOException, ClassNotFoundException: read object from stream
+2.public void close() throws IOException
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

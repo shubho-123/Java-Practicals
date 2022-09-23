@@ -1,0 +1,112 @@
+
+
+#### Design mindmap: Java architecture and advantages of Java
+
+//////////////////////////////////////////////////<---HOME WORK--->///////////////////////////////////////////////////////////////
+
+
+Read the question carefully and follow the input and output format.
+
+Karan got salary for this month and she spends 20% of her salary for food and 30% of her salary for travel. 
+If she takes care of other shifts she will get 2% of the salary per day. Given her salary and the number of shifts she handled. 
+Calculate how much she can save in her pocket after spending all these?
+
+Input and Output Format :
+First line of input consists of an integer, salary. Next line correspond to the number of shifts. Output consist of an integer, which is saving.
+
+1) Print "Salary too large" when salary is greater than 80000.
+2) Print "Shifts too small" when the shift is less than 0.
+3) Print "Salary too small" when the salary is less than 0.
+
+
+Sample Input 1:
+7000
+5
+Sample Output 1:
+4200
+
+Sample Input 2:
+80000
+Sample Output 2:
+Salary too large
+Sample Input 2:
+6000
+-1
+Sample Output 2:
+Shift too small
+////////////////////////////////////////////////////////////////////////////////////
+
+Read the question carefully and follow the input and output format.
+
+A Sales person daily allowances calculated as follows .
+Item              Money (rupees)
+Shirt                   15
+Saree                   10
+other items              5
+
+Given an input array in which the first index represents no.of shirts sold, second index represents the no of sarees sold  and 
+the third index represents the other items sold for a particular day, Calculate the total allowances.
+
+Include a function named dailyAllowance(int items[], int size) that returns an integer, which is the total allowances.
+
+Business Rules:
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program
+2) Print "Invalid item count" when there is any negative numbers available in the input array and terminate the program
+3) Print "Array size greater than 3"  when size of the array is greater than 3 and terminate the program.
+
+Input and Output Format :
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of the total allowance.
+
+Sample Input 1:
+3
+10
+5
+10
+Sample Output 1:
+250
+
+Sample Input 2:
+4
+
+Sample Output 2:
+Array size greater than 3	 
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Read the question carefully and follow the input and output format.
+
+Given the basic salary as input, write a program to calculate the bonus and display it.
+
+The bonus will be calculated based on the below category.
+Basic>20000 bonus=17%of basic+1500
+Basic>15000 bonus=15%of basic+1200
+Basic>10000 bonus=12%of basic+1000
+for rest =8%of basic+500
+
+Input and Output Format :
+
+First line of input consists of n, the basic salary.
+Output is a single integer that displays the bonus.
+
+Print "Number too large" when the given input numbers is greater than 32767 .
+Print "Number too small" when the given input is a negative number.
+
+Include a function named calculateBonus(int basic) whose return type is an integer, the bonus.
+
+Sample Input 1:
+21000
+
+Sample Output 1:
+5070
+
+Sample Input 2:
+327678
+Sample Output 2:
+Number too large
+
+/////////////////////////////////////////////////////////////////
+

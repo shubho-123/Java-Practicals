@@ -1,0 +1,820 @@
+1. Addition of Two matrix ---> ArrayMultiAddd
+
+2.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1.create a class Area and calculate area of circle, square, rectangle and triangle						##Done
+2.create a class Arithmetic and perform all arithmetic operations, create separate method for			####<<<<<<<<----------------
+ each operation.
+overload area() -> area of circle,area of triangle
+
+
+
+1.Employee : id,name, workingDays,ratePerDay,salary. create both constructor and appropriate method.       ##Done
+2.Student : id,name,m1,m2,m3,total, percent. create both constructor and appropriate method.	         	##Done
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ Q.A company manufactures 3 products namely computer stationary, fixed disks and computers. The following codes are used to indicate them
+			product					Code
+			Computer Stationary		1
+			Fixed disks				2
+			Computers				3
+			
+The company has a discount policy as follows:
+			Product					Order amount				discount rate
+			Computer stationary		$500 or more				12%
+			Computer stationary		$300 or more				8%
+			Computer stationary		below $300					2%
+			Fixed Disks				$2000 or more				10%
+			Fixed Disks				$1500 or more				5%
+			Computers				$5000 or more				10%
+			Computers				$2500 or more				5%
+			
+Calculate discount.
+
+Ans-->Company
+
+/////////////////////////////////////////////////////#*   Series   *#/////////////////////////////////////////////////////////////////////////////////////
+
+1.	1 3 5 7 9 ....n
+2.	1 4 9 16 25 ....n
+3.  1 8 27 64 ....n
+4.  1 9 25 49 ....n
+5.  1/1 + 1/2 + 1/3 +   + 1/n = ?
+6.  1/1 + 2/2 + 3/3 +...+ n/n = ?
+7.  1/1 + 2/4 + 3/9 + ...n/n = ?
+8.  1/2 + 2/3 + 3/4 + ... 10/11 = ?
+9.  1*2 + 2*3 + 3*4 + ... 15*16 = ?
+10. 1-2+3-4+5-6... n = ? 
+11. 1/1! + 2/2! +  ... + n/n! = ?
+
+*******************************************************************************************************************************************************************************
+									     1)	[COMPLETED]	Ans-->Practical1
+**********************************************************************************************************************************************************
+1. Read the question carefully and follow the input and output format.
+
+   Write a function to find second largest number in the given input integer array.
+
+   Assume that all elements in the input array are unique.
+
+   Input and Output Format :
+
+   First line of input consists of n, the number of elements. Next n lines correspond to the array elements.
+   Output consist of an integer, which is the second largest.
+
+   1) Print "Invalid array size" when size of the array is a negative number and terminate the program.
+   2) Print "Invalid input" when there is any negative number available in the input array and terminate the program.
+
+   Include a function named secondLargest(int array[], int size) whose return type is an integer, the second largest.
+
+Sample Input 1:
+5
+3
+342
+53
+2
+12
+
+Sample Output 1:
+53
+
+Sample Input 2:
+5
+3
+342
+53
+-2
+
+
+Sample Output 2:
+Invalid input
+
+
+
+*******************************************************************************************************************************************************************************
+									3)	[COMPLETED] Ans.-->EmplyeePractical	
+*******************************************************************************************************************************************************************
+3.	create a class Employee with the following data members and member functions.							
+	Data members : empName,empCode, basicSalary, allowance, grossSalary, tax, netSalary
+	Member Functions :
+	void accept() : to input empName, empCode, basicSalary
+	void allow() : to calc and store allowance as 55% of basicSalary.  
+	void gross() : to calc and store grossSalary as sum of basicSalary and allowance
+	void tax() : to calc and store tax as 12% of grossSalary
+	void net() : to calc and store netSalary as grossSalary less tax.
+	void display() : to display salary slip containing empCode, empName, basicSalary, tax and netSalary
+	void main() : create an object of a class and execute all methods in logical order.
+	constructor : to declare all the data members to zero/nil
+	
+
+
+*******************************************************************************************************************************************************************************
+									4)	[COMPLETED] Ans.-->CustomerCare
+*****************************************************************************************************************************************************************	
+4.	create a class called Best with the following data members and member functions.							
+	Data members : custName,phoneNo,number of calls, tax and bill.
+	Member Functions :
+	accept() : input custName, phoneNo and calls from user
+	billing() : calculate bill amount based on the following condition
+	
+		Number of calls			Rate per call(Rs)
+		up to 100				nill
+		next 200				0.80
+		next 200				1.25
+		above 500				2.50
+		
+		The program should add 12% service tax over the bill amount to get the final bill.
+
+
+************************************************************************************************************************************************************************************
+										5)	[COMPLETED] Ans. Practical5
+***********************************************************************************************************************************************************
+5.Q.
+Read the question carefully and follow the input and output format.
+
+In a game show everybody got one coupon with some code. They need to generate a code with only even numbers in that coupon. Find the answer.
+
+Input and Output Format :
+Input consists of  an integer. Output consist of an integer, which is the generated code.
+
+1) Print "Number too small" when the given input number is a negative number.
+2) Print "Number too large" when the given input number is greater than 32767.
+3) Print 0 If the coupon does not contain any even numbers.
+
+Include a function named generateCode(int coupon) whose return type is an integer, which is the generated code.
+
+Sample Input 1:
+4352
+
+Sample Output 1:
+42
+
+Sample Input 2:
+1357
+
+Sample Output 2:
+0
+
+Sample Input 3:
+-1357
+
+Sample Output 3:
+Number too small
+
+*******************************************************************************************************************************************************************************
+										6)	[COMPLETED] Ans. Practical6
+********************************************************************************************************************************************************************
+6.Read the question carefully and follow the input and output format.
+
+Given the cubic capacity(CC) of a bike. Write a function to return the mileage/liter for the given Cubic Capacity(CC). The mileage will be calculated as follows:
+
+if CC is between 100 and 125, mileage is 75
+if CC is between 126 and 135, mileage is 70
+if CC is between 136 and 150, mileage is 60
+if CC is between 151 and 200, mileage is 50
+if CC is between 201 and 220, mileage is 35
+
+First line of input consists of an integer that corresponds to CC of a bike. Output consist of an integer, which is the mileage.
+
+Print "Number too large" when the given input CC is greater than 220.
+Print "Number too small" when the given input CC is less than 100.
+
+Include a function named findMileage(int cc) whose return type is an integer, which is the mileage.
+
+Sample Input 1:
+1
+
+Sample Output 1:
+Number too small
+
+Sample Input 2:
+160
+
+Sample Output 2:
+50
+
+******************************************************************************************************************************************************************************
+											7)	[COMPLETED] Ans. Practical7
+*******************************************************************************************************************************************************************************
+7.
+Read the question carefully and follow the input and output format.
+
+Given an input array which contains age of some employees, write a program to find the sum of ages of employees greater than 18.
+
+Input and Output Format :
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of an integer, which is the sum.
+
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program.
+2) Print "Invalid input" when there is any negative number available in the input array and terminate the program.
+
+Include a function named newArraySum(int age[],int size) whose return type is an integer, which is the sum.
+
+Sample Input 1:
+5
+21
+22
+17
+10
+25
+Sample Output 1:
+68
+
+Sample Input 2:
+6
+50
+-36
+
+Sample Output 2:
+Invalid input
+****************************************************************************************************************************************************************************
+												8)	[COMPLETED] Ans. Practical8
+*******************************************************************************************************************************************************************************
+Q.8
+ In a game show everybody got one coupon with some code. They need to count the digits in the code and send SMS to the given number.
+ 
+Write a program to find the number of digits in the given number.
+ Include a function named countDigits that accepts an integer argument and returns an integer that corresponds to the number of digits. 
+ If the input is a negative number, the function returns -1.
+ If the function returns -1, print Invalid Input.
+Input and Output Format:
+Input consists of a single integer.
+Output consists of an integer that corresponds to the number of digits in the input.
+Sample Input 1:
+250
+Sample Output 1:
+3
+Sample Input 2:
+-2345
+Sample Output 2:
+Invalid Input
+
+*******************************************************************************************************************************************************************************
+											9)	[COMPLETED] Ans. Practical 9
+***********************************************************************************************************************************************************************************
+Q.9
+Write a program to find the average of the array.
+ Include a function named avgArray that accepts 2 arguments and returns a float. 
+ The first argument is the input array and the second argument is an int that corresponds to the size of the array. 
+ The function returns a float that corresponds to the average of the array.
+ If the size of the array is negative or if any element in the array is negative , print “Invalid Input” and terminate the program.
+ Input and Output Format:
+Input consists of n+1 integers. The first integer corresponds to n, the number of elements in the array. The next 'n' integers correspond to the elements in the array.
+Output consists of a floating point number that corresponds to the average. It is displayed correct to 2 decimal places.
+Assume that the maximum size of the array is 20.
+ 
+Sample Input 1:
+7
+1
+9
+8
+4
+6
+4
+5
+Sample Output 1:
+5.29
+Sample Input 2:
+-5
+Sample Output 2:
+Invalid Input
+Sample Input 3:
+5
+23
+2
+-5
+
+ Sample Output 3:
+Invalid Input
+
+*******************************************************************************************************************************************************************************
+													10)	[COMPLETED] Ans. Practical 10
+*******************************************************************************************************************************************************************************
+
+10.
+Read the question carefully and follow the input and output format.
+
+Given the basic salary as input, write a program to calculate the bonus and display it.
+
+The bonus will be calculated based on the below category.
+Basic>20000 bonus=17%of basic+1500
+Basic>15000 bonus=15%of basic+1200
+Basic>10000 bonus=12%of basic+1000
+for rest =8%of basic+500
+
+Input and Output Format :
+
+First line of input consists of n, the basic salary.
+Output is a single integer that displays the bonus.
+
+Print "Number too large" when the given input numbers is greater than 32767 .
+Print "Number too small" when the given input is a negative number.
+
+Include a function named calculateBonus(int basic) whose return type is an integer, the bonus.
+
+Sample Input 1:
+21000
+
+Sample Output 1:
+5070
+
+Sample Input 2:
+327678
+Sample Output 2:
+Number too large
+
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+11.
+Read the question carefully and follow the input and output format.
+
+A Sales person daily allowances calculated as follows .
+Item              Money (rupees)
+Shirt                   15
+Saree                   10
+other items              5
+
+Given an input array in which the first index represents no.of shirts sold, second index represents the no of sarees sold  and 
+the third index represents the other items sold for a particular day, Calculate the total allowances.
+
+Include a function named dailyAllowance(int items[], int size) that returns an integer, which is the total allowances.
+
+Business Rules:
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program
+2) Print "Invalid item count" when there is any negative numbers available in the input array and terminate the program
+3) Print "Array size greater than 3"  when size of the array is greater than 3 and terminate the program.
+
+Input and Output Format :
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of the total allowance.
+
+Sample Input 1:
+3
+10
+5
+10
+Sample Output 1:
+250
+
+Sample Input 2:
+4
+
+Sample Output 2:
+Array size greater than 3	 
+		 
+
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+12Q.
+Write a program to accept depositor's name, principle amount and number of years from the user. Using function amount(), calculate the accumulated amount using the below formula,
+	a=p*(1+r/100)		Hint: Math.pow()
+a=accumulated amount, p=principle amount, r=rate of interest, n=no. of years
+value of p and n to be taken from the user, and depending on the value n, r to be calculated as per the following table-
+		No. of years			Rate of Interest
+		<1						9
+		>=1 but <=3				9.25
+		>3 but <=5				9.5
+		above 5					9.75
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+13Q.
+Write a program to input a no from user and using a function called prime(), check and print whether the no. is prime number or not?
+
+
+HAS-A Relationship(Containment/Aggregation)
+relationship between entity and it's property
+Address : addrLine,street,city,state,country,pincode
+MyDate : dd,mm,yy
+Person : id,name,address,dob
+
+
+IS-A Relationship(Inheritance)
+relationship between different entities.
+Person : id,name,addr,phoneNo
+Employee : 
+
+Employee is a Person.
+Person is an Address.
+Person has an Address.
+
+Address : addrLine,street,city,state,country,pincode, display()
+Employee : id,name,dob,address
+Student : id,name,address,phoneNumber
+
+
+Inheritance : 
+- extends
+- super,super()
+
+Person(Base, Parent, Super class) <= Employee(Derived, child, sub class)
+
+super():must be 1st line of constructor,used to call super class constructor
+super:used to access data member or method
+
+Method Overriding : same method name having same parameter/signature,
+
+Types of Inheritance :
+1.Single-level Inheritance : 
+2.Multilevel
+3.Hierarchical
+
+
+Person - Employee
+Person - Student : 3subjects, total,percent, calculate():calc total and percent display():display id,name,dob,total,percent
+		 Grade:calculate():calc grade, display(): to display id,name,dob,total,percent,grade
+		 
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+14Q.
+Person <- Customer(prodName,quantity, price, billAmount) <- Discount 
+
+	if billAmount is 20000 or greater than then 15% discount on billAmount
+				15000 or more then 10% discount on billAmount
+				10000 or more then 7% discount on billAmount
+				below 10000 no discount.
+				
+				calculate discount and final bill.
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+1.Create an employee class, add method to calculate yearly salary, calculateYearlySalary(), 
+  add method calculateAppraisal() : if salary >=30000 appraisal=2000 else appraisal=1000
+  
+  2.Create a SalesPerson class, and calculate commission according to sales
+  	if sales>=90	commission: 20% of the salary
+  	if sales>=80	commission: 10% of the salary
+  	if sales>=70 	commission: 5% of the salary
+  	below 70	no commission
+							
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+15Q.
+Write a program to find whether the given number is a 3/5 Number.
+ 
+A number is a 3/5 Number if the product of the digits in the number is divisible by 3 or 5.
+ 
+Include a function named divisibleByThreeFive that accepts an integer argument and returns an integer. The function returns
+1.	1 if it is a 3/5 Number
+2.	0 if it is not a 3/5 Number
+3.	-1 if it is a negative number
+ 
+Input and Output Format:
+Input consists of a single integer.
+Output consists of a string.
+Refer sample output for formatting specifications.
+ 
+Sample Input 1:
+251
+ 
+Sample Output 1:
+yes
+ 
+Sample Input 2:
+241
+ 
+Sample Output 2:
+no
+ 
+Sample Input 3:
+-9
+ 
+Sample Output 3:
+Invalid Input
+				
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+16
+Read the question carefully and follow the input and output format.
+
+Given an input array that represents the marks of students, find out the marks which are greater than or equal to average mark of all students.
+
+Input and Output Format:
+First line of input consists of n, the number of elements in the input array.
+Next n lines correspond to the array elements. Output consist of an integer array.
+
+1) Print "Invalid array size" when size of the array is negative and terminate the program.
+2) Print "Invalid input" when there is any negative numbers available in the input array and terminate the program.
+
+Include a function named aboveAverageMarks(int array[], int size) whose return type is void.
+The output array is stored in a global variable named above_average.
+
+Sample Input 1:
+5
+10
+20
+30
+40
+50
+Sample Output 1:
+30
+40
+50
+
+Sample Input 2:
+4
+-3
+Sample Output 2:
+Invalid Input
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+17.
+Read the question carefully and follow the input and output format.
+
+Karen got salary for this month and she spends 20% of her salary for food and 30% of her salary for travel. 
+If she takes care of other shifts she will get 2% of the salary per day. Given her salary and the number of shifts she handled. 
+Calculate how much she can save in her pocket after spending all these?
+
+Input and Output Format :
+First line of input consists of an integer, salary. Next line correspond to the number of shifts. Output consist of an integer, which is saving.
+
+1) Print "Salary too large" when salary is greater than 8000.
+2) Print "Shifts too small" when the shift is less than 0.
+3) Print "Salary too small" when the salary is less than 0.
+
+
+Sample Input 1:
+7000
+5
+Sample Output 1:
+4200
+
+Sample Input 2:
+80000
+Sample Output 2:
+Salary too large
+Sample Input 2:
+6000
+-1
+Sample Output 2:
+Shift too small
+*******************************************************************************************************************************************************************************
+											[COMPLETED] Ans.Practical 18
+*******************************************************************************************************************************************************************************
+18.
+Q.
+Read the question carefully and follow the input and output format.
+
+Given an input array that represents the marks of students, find out the marks which are greater than or equal to average mark of all students.
+
+Input and Output Format:
+First line of input consists of n, the number of elements in the input array.
+Next n lines correspond to the array elements. Output consist of an integer array.
+
+1) Print "Invalid array size" when size of the array is negative and terminate the program.
+2) Print "Invalid input" when there is any negative numbers available in the input array and terminate the program.
+
+Include a function named aboveAverageMarks(int array[], int size) whose return type is void.
+The output array is stored in a instance variable named above_average.
+
+Sample Input 1:
+5
+10
+20
+30
+40
+50
+Sample Output 1:
+30
+40
+50
+
+Sample Input 2:
+4
+-3
+Sample Output 2:
+Invalid Input
+				
+*******************************************************************************************************************************************************************************
+										[COMPLETED] Ans.Practical 19
+*******************************************************************************************************************************************************************************
+19.
+Q.
+Read the question carefully and follow the input and output format.
+
+Given an integer array. The first index represents the Student id, Second index represents C-programming marks and the third index Represents SQL marks. 
+Write a program to find the Ids of students who have cleared both C-programming and SQL.
+
+Note :(1) The Pass Marks is >=70
+
+Input and Output Format :
+
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of an integer array.
+
+1) Print "Invalid array size" when size of the array is negative and terminate the program.
+2) Print "Invalid input" when there is any negative number available in the input array and terminate the program.
+
+Include a function named clearedStage1(int array[], int size) whose return type is void.
+The output array is stored in a instance variable named cleared.
+
+Sample Input 1:
+9
+1
+25
+75
+3
+75
+80
+2
+75
+75
+
+Sample Output 1:
+3
+2
+
+Sample Input 2:
+6
+4
+25
+-78
+
+Sample Output 2:
+Invalid input			
+
+*******************************************************************************************************************************************************************************
+										[COMPLETED] Ans.Practical 20
+*******************************************************************************************************************************************************************************
+	
+20.
+Read the question carefully and follow the input and output format.
+
+Write a program to check if the first and middle element in an array is the same, if so display “100” in output or else display the first element of the array.
+
+Note: Array size is always odd.
+
+Input and Output Format :
+The first line of the input consists of an integer, n that corresponds to the number of elements in the array.
+The next 'n' lines correspond to the elements in the array.
+
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program.
+2) Print "Invalid input" when there is any negative numbers available in the input array and terminate the program.
+3) Print "Size must be odd" when the size of the array is even.
+
+Sample Input 1:
+7
+8
+4
+5
+8
+3
+2
+1
+
+Sample Output 1:
+100
+
+Sample Input 2:
+10
+4
+5
+6
+-8
+
+Sample Output 2:
+Invalid input
+
+Sample Input 3:
+3
+4
+8
+6
+
+Sample Output 3:
+4
+*******************************************************************************************************************************************************************************
+										[COMPLETED] Ans.Practical 21
+*******************************************************************************************************************************************************************************
+
+21.
+Q.
+Read the question carefully and follow the input and output format.
+
+Given a number n, count the occurences of a number,x in n.
+
+Input and Output Format :
+The first line of the input consists of an integer n, the second line consists of an integer, which is the digit whose occurence is to be calculated. 
+Output is an integer that gives the count.
+
+Print "Number too small" if any of the 2 input numbers is less than 0 and terminate the program.
+Print "Number too large" if any of the 2 input numbers is greater than 32767 and terminate the program.
+
+Sample Input 1:
+1122
+1
+Sample Output 1:
+2
+
+
+Sample Input 2:
+-2134
+Sample Output 2:
+Number too small
+			
+*******************************************************************************************************************************************************************************
+										[COMPLETED] Ans.Practical 22
+*******************************************************************************************************************************************************************************
+	
+Q.22
+Read the question carefully and follow the input and output format.
+
+Given input as integer array in which consecutive elements should have a difference of 4 or more than 4.
+
+If the above condition matches display “1” else “0”
+
+Input and Output Format :
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of an integer, which is the either 1 or 0
+
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program.
+2) Print "Invalid input" when there is any negative numbers available in the input array and terminate the program.
+
+Sample Input 1:
+6
+1
+5
+10
+6
+2
+7
+
+Sample Output 1:
+1
+
+Sample Input 2:
+-8
+
+Sample Output 2:
+Invalid array size
+				
+*******************************************************************************************************************************************************************************
+										[COMPLETED] Ans.Practical 23
+*******************************************************************************************************************************************************************************
+						
+Q.23
+Write a program to find the maximum repeated element in a given input array.
+ 
+Include a function named maxRepeatedElement that accepts 2 arguments and returns an int. 
+The first argument is the input array and the second argument is an int that corresponds to the size of the array. 
+The function returns an int that corresponds to the maximum repeated element.
+ 
+If the size of the array is negative or if any element in the array is negative, print “Invalid Input” and terminate the program.
+ 
+Input and Output Format:
+Input consists of n+1 integers. The first integer corresponds to n, the number of elements in the array. The next 'n' integers correspond to the elements in the array.
+Output consists of an integer that corresponds to the maximum repeated element.
+Assume that the maximum number of elements in the array is 20 and that there will always be a unique maximum repeated element.
+Sample Input 1:
+8
+2
+1
+3
+4
+6
+8
+10
+8
+ 
+Sample Output 1:
+8
+ 
+Sample Input 2:
+-5
+ 
+Sample Output 2:
+Invalid Input
+ 
+Sample Input 3:
+5
+23
+2
+-200
+ 
+Sample Output 3:
+Invalid Input
+
+*******************************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************************
+24.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

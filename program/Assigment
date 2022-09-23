@@ -1,0 +1,102 @@
+Q.1
+Read the question carefully and follow the input and output format.
+
+Given an input array which contains age of some employees, write a program to find the sum of ages of employees greater than 18.
+
+Input and Output Format :
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of an integer, which is the sum.
+
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program.
+2) Print "Invalid input" when there is any negative number available in the input array and terminate the program.
+
+Include a function named newArraySum(int age[],int size) whose return type is an integer, which is the sum.
+
+Sample Input 1:
+5
+21
+22
+17
+10
+25
+Sample Output 1:
+68
+
+Sample Input 2:
+6
+50
+-36
+
+Sample Output 2:
+Invalid input
+
+Q.2
+Write a program to find if the student is eligible for first, second or third grade universities by finding the average of their marks given in the input integer array.
+ Grade should be calculated as given below :
+Average >80 First Grade University
+Average >60 Second Grade University
+Otherwise Third Grade University
+ Include a function named calculateGrade that accepts 2 arguments and returns an integer. 
+ The first argument is the input array and the second argument is an int that corresponds to the size of the array. 
+ The function returns an integer that corresponds to the university type. 
+ The function returns 1 if the student is eligible for First Grade univesity, 
+ returns 2 if the student is eligible for Second Grade University, 
+ returns 3 if the student is eligible for Third Grade University and 
+ returns -1 if the average is greater than 99.
+ 
+If the size of the array is negative or if any element in the array is negative or if the average marks scored by the student is greater than 99 , 
+print “Invalid Input” and terminate the program.
+
+ Input and Output Format:
+Input consists of n+1 integers. The first integer corresponds to n, the number of elements in the array. The next 'n' integers correspond to the elements in the array.
+Output consists of a string --- “First Grade University” or “Second Grade University” or “Third Grade University” or “Invalid Input”.
+Assume that the maximum size of the array is 20.
+Sample Input 1:
+5
+92
+87
+78
+74
+80
+ 
+Sample Output 1:
+First Grade University
+ Sample Input 2:
+-5
+Sample Output 2:
+Invalid Input
+Sample Input 3:
+5
+23
+2
+-5
+ Sample Output 3:
+Invalid Input
+
+
+Q.3
+Jim got his salary. His salary calculations are as follows.
+From his Basic amount he gets 50% of his basic for house Rent allowances and 75% of his basic as special allowances . 
+If the number of days he worked is 31 he gets 500 extra. Write a program to calculate his gross salary after calculating all his salary split up.
+ 
+Include a function named calculateGross that accepts 2 integer arguments and returns a float. 
+The first integer corresponds to Jim's basic salary and the second integer corresponds to the number of days Jim has worked. 
+The function returns a float that corresponds to the gross salary.
+
+ Print Invalid Input and terminate the program in the following cases:
+1.       Basic salary is greater than 10000
+2.       Number of working days is greater than 31
+3.       Basic salary is negative
+4.       Number of working days is 0 or negative
+Input and Output Format:
+Input consists of 2 integers. The first integer corresponds to Jim's basic salary and the second integer corresponds to the number of days he has worked.
+Output consists of a single float that corresponds to Jim's gross salary. The gross salary is displayed correct to 2 decimal places.
+ Sample Input 1:
+5000
+30
+ Sample Output 1:
+11250 .00
+ Sample Input 2:
+5000
+0
+Sample Output 2:
+Invalid Input

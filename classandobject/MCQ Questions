@@ -1,0 +1,158 @@
+Q.1
+What will be the output of the following Java code?
+
+    class increment {
+        public static void main(String args[]) 
+        {        
+             int g = 3;
+             System.out.print(++g * 8);
+        } 
+    }
+    
+a) 32
+b) 33
+c) 24
+d) 25
+
+ans. a
+
+Q.2
+What will be the output of the following Java program?
+
+    class variable_scope 
+    {
+        public static void main(String args[]) 
+        {
+            int x;
+            x = 5;
+            {
+	        int y = 6;
+	        System.out.print(x + " " + y);
+            }
+            System.out.println(x + " " + y);
+        } 
+    }
+    
+    
+a) Compilation error
+b) Runtime error
+c) 5 6 5 6
+d) 5 6 5
+
+ans.a (you can't use 'y' outside a block)
+
+Q.3
+What will be the output of the following Java program?
+
+    class Output 
+    {
+        public static void main(String args[])
+        {
+            int arr[] = {1, 2, 3, 4, 5};
+            for ( int i = 0; i < arr.length - 2; ++i)
+                System.out.print(arr[i] + " ");
+        } 
+    }
+    
+a) 1 2 3 4 5
+b) 1 2 3 4
+c) 1 2
+d) 1 2 3    
+
+ans. d
+
+Q.4
+class Demo {
+    public static void main(String args[]) {
+      for (int i =0; i <3; i++) { i=1 
+        switch(i) {
+        case 0: break;
+        case 1: System.out.print("one ");
+        case 2: System.out.print("two ");
+        case 3: System.out.print("three ");
+        }
+        }
+        System.out.println("done");
+        }
+}
+
+A. done
+B. one two three done
+C. one two three two three done
+D. one two three one three one two done
+
+ans.C
+
+Q.5
+Q. Find the output
+
+class Demo {
+    public static void main() {
+        int odd = 1;
+        if (odd) {
+            System.out.println("odd");
+        } else {
+            System.out.println("even");
+        }
+    }
+}
+A. odd
+B. even
+C. odd even
+D. Error
+
+ans.D (you can't pass int inside if)
+
+Q.6
+Predict the code.
+// filename Test.java
+class Test {
+	public static void main(String[] args) {
+		for(int i = 0; true; i++) {
+			System.out.println("Hello");
+			break;
+		}
+	}
+}
+
+ans.Hello
+
+Q. 7
+Find the output
+
+class Demo {
+    public static void main(String args[]) {
+        int index = 0;
+        boolean flag = true;
+        boolean a = false, b;
+        b = (flag | ((index++) == 0));  true | true
+        b = (a | ((index += 2) > 0));	false | 3>0
+        System.out.println(index);
+    }
+}
+A. 0
+B. 1
+C. 2
+D. 3
+
+ans.D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

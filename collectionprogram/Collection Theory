@@ -1,0 +1,219 @@
+- Array has fixed capacity
+- It is complex to insert array element at the start and at the middle of an array
+- you need to write a code to search,sort array elements, there are no predefined methods are available.
+
+Collection Framework : 
+
+- java.util.*;
+
+Iterator: it provides the facility of iterating the elements in forward direction only.
+Methods:
+1.public boolean hasNext() : it returns true if iterator has more elements
+2.public Object next() : it returns the element and moves the cursor pointer to the next element
+3.public void remove() : it removes the last element return by the Iterator. It is rarely used.
+
+Generic and non-generic:
+generic:type-specific
+
+ArrayList :
+- it internally uses dynamic array
+- can contains duplicate elements
+- maintains insertion order
+- non-synchronized
+- default capacity : 10
+- new capacity = (current capacity*3/2)+1
+			   = 15+1 = 16
+- once arraylist reaches it's maximum capacity, a bigger arraylist object is going to be created, copy all the elements of 1st list into another,
+  and reference will refer to new list.
+- implements Serializable and Cloneable interface
+- ArrayList and Vector implements RandomAccess interface
+- heterogeneous objects are allowed
+- null insertion is possible
+- best choice for retrieval but manipulation is slow
+
+LinkedList :
+- uses doubly linked list
+- non-synchronized
+- contains duplicate elements
+- maintains insertion order
+- null insertion is possible
+- heterogeneous objects are allowed
+- implements Serializable and cloneable interfaces
+- best choice for manipulation but retrieval is slow
+
+ListIterator:
+- it used to traverse the elements in forward and backward direction.
+hasPrevious()
+previous()
+
+Sorting: 
+- To sort the list elements we can use Comparable and Comparator interfaces
+- String class and wrapper classes implements Comparable interface, so if you store the objects of string or wrapper classes, it'll be Comparable
+- Collections.sort(list);
+
+Comparable:
+- single sorting order
+- present in java.lang package
+- compareTo(Object obj)
+- Collections.sort(list);
+
+Comparator:
+- multiple sorting sequence
+- present in java.util.* package
+- compare(Object o1, Object o2)
+- Collections.sort(list,Comparator);
+
+Vector :
+- it is a legacy class(present from 1st version of java)
+- uses growable array
+- duplicate elements are allowed
+- maintains insertion order
+- null insertion is possible
+- heterogeneous objects are allowed
+- synchronized
+- implements Serializable, Cloneable and RandomAccess interfaces
+- default capacity is 10
+- new capacity = current capacity * 2;
+- best choice for retrieval 
+
+
+Stack:
+- child of vector
+- specially designed for Last In First Out(LIFO)
+
+Methods:
+1.Object push(Object o): used to insert an object
+2.Object pop(): used to return and remove top of the stack
+int search(Object o): if the specified object is available it returns it's offset from top of the stack, if object is not available it returns -1
+
+Set: implemented in HashSet,LinkedHashSet, TreeSet
+- unique element, insertion order is not preserved
+
+HashSet(1.2):
+- uses Hashtable
+- all object will be inserted based on hashcode of object(hashing mechanism)
+- implements Serializable and Cloneable interface
+- heterogeneous objects are allowed
+- best choice for search operation
+
+LinkedHashSet:
+- child of HashSet
+- introduced in 1.4 version
+- internally uses Hashtable and LinkedList
+- maintains insertion order
+- implements Serializable and Cloneable interface
+- heterogeneous objects are allowed
+
+TreeSet:(Set(I) <- SortedSet(I) <- TreeSet(c))
+- uses balanced tree
+- maintains sorted(ascending) order
+- heterogeneous objects are allowed
+- implements Serializable and Cloneable interface
+- null insertion is not possible
+
+Queue:
+- it follows First In First Out(FIFO)
+
+PriorityQueue:
+- provides the facility of using queue.
+- but it does not orders the element in FIFO manner
+
+Deque(I):
+- doubly ended queue (insertion and deletion at both the ends)
+- null insertion is not allowed
+- implemented in ArrayDeque and LinkedList class
+- no capacity
+
+
+Map:
+- is not chain interface of Collection.
+- it contains values on the basis of keys i.e. key and value pair
+- each pair is known as entry
+- it contains only unique keys, values can be duplicated
+- it is useful if you have to search, update and delete elements on the basis of key
+
+Methods:
+1.Object put(Object key, Object value): used to insert entry in a Map
+2.void putAll(Map map): used to insert the specified Map
+3.Object remove(Object key): used to delete entry for the specified key
+4.Object get(Object key): used to return the value for the specified key
+5.boolean containsKey(Object key): used to search specified key from the Map
+6.Set keySet(): used to return a set view containing all the keys
+7.Set entrySet(): used to return a Set view containing all the keys and values
+
+Map.Entry interface:
+- sub interface of Map
+- it provides methods to get keys and values
+Methods:
+1.Object getKey()
+2.Object getValue()
+
+HashMap :
+- uses Hashtable
+- contains only unique keys
+- it maintains no order(random)
+- may have 1 null key and multiple null values
+
+TreeMap:
+- uses Balanced Tree
+- contains only unique elements
+- it maintains ascending order
+- it can not have null key but can have multiple null values
+
+Hashtable:
+- legacy class
+- synchronized
+- it is an array of list. Each list is known as bucket
+- the position of bucket is identified by hashcode()
+- contains only unique elements
+- may not have any null key or value
+
+Properties:
+- subclass of Hashtable
+- properties object contains key and value pair both as a String
+- used to get property value based on the property key
+- used to store information which is to be change frequently
+- Recompilation is not required if information is changed from properties file
+
+
+
+# Enhance for loop(for-each loop):
+- to iterate only collection(array, any collection class)
+- in for loop we know the range but in for-each loop we print the every each element(difference between for loop and for each loop)
+
+*for:								for-each:
+
+int a[]={2,4,6,12,16,20};			int a[]={2,4,6,12,16,20};	
+for(int i=0;i<a.length;i++)			for(TypeOfCollection variable : ObjectOfCollection)
+ {										{
+ sop(a[i]);									.......
+ }										}
+									for(int x : a) //int x=2
+									{
+										sop(x);
+									}
+									it's better to use for each loop rather then for loop 
+									in for loop we need to declare , initialize , and implementing but in for each we don't need to do this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

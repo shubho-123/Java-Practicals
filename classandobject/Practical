@@ -1,0 +1,111 @@
+1.create a class Area and calculate area of circle, square, rectangle and triangle						##Done
+2.create a class Arithmetic and perform all arithmetic operations, create separate method for			####<<<<<<<<----------------
+ each operation.
+overload area() -> area of circle,area of triangle
+
+
+
+1.Employee : id,name, workingDays,ratePerDay,salary. create both constructor and appropriate method.       ##Done
+2.Student : id,name,m1,m2,m3,total, percent. create both constructor and appropriate method.	         	##Done
+
+	
+3.	create a class Employee with the following data members and member functions.							##Done
+	Data members : empName,empCode, basicSalary, allowance, grossSalary, tax, netSalary
+	Member Functions :
+	void accept() : to input empName, empCode, basicSalary
+	void allow() : to calc and store allowance as 55% of basicSalary.  
+	void gross() : to calc and store grossSalary as sum of basicSalary and allowance
+	void tax() : to calc and store tax as 12% of grossSalary
+	void net() : to calc and store netSalary as grossSalary less tax.
+	void display() : to display salary slip containing empCode, empName, basicSalary, tax and netSalary
+	void main() : create an object of a class and execute all methods in logical order.
+	constructor : to declare all the data members to zero/nil
+	
+	
+4.	create a class called Best with the following data members and member functions.							##Done
+	Data members : custName,phoneNo,number of calls, tax and bill.
+	Member Functions :
+	accept() : input custName, phoneNo and calls from user
+	billing() : calc bill amount based on the following condition
+	
+		Number of calls			Rate per call(Rs)
+		up to 100				nill
+		next 200				0.80
+		next 200				1.25
+		above 500				2.50
+		
+		The program should add 12% service tax over the bill amount to get the final bill.
+		
+		
+		
+		
+		
+5.Q.
+Read the question carefully and follow the input and output format.
+
+In a game show everybody got one coupon with some code. They need to generate a code with only even numbers in that coupon. Find the answer.
+
+Input and Output Format :
+Input consists of  an integer. Output consist of an integer, which is the generated code.
+
+1) Print "Number too small" when the given input number is a negative number.
+2) Print "Number too large" when the given input number is greater than 32767.
+3) Print 0 If the coupon does not contain any even numbers.
+
+Include a function named generateCode(int coupon) whose return type is an integer, which is the generated code.
+
+Sample Input 1:
+4352
+
+Sample Output 1:
+42
+
+Sample Input 2:
+1357
+
+Sample Output 2:
+0
+
+Sample Input 3:
+-1357
+
+Sample Output 3:
+Number too small
+
+
+6.Read the question carefully and follow the input and output format.
+
+Given the cubic capacity(CC) of a bike. Write a function to return the mileage/liter for the given Cubic Capacity(CC). The mileage will be calculated as follows:
+
+if CC is between 100 and 125, mileage is 75
+if CC is between 126 and 135, mileage is 70
+if CC is between 136 and 150, mileage is 60
+if CC is between 151 and 200, mileage is 50
+if CC is between 201 and 220, mileage is 35
+
+First line of input consists of an integer that corresponds to CC of a bike. Output consist of an integer, which is the mileage.
+
+Print "Number too large" when the given input CC is greater than 220.
+Print "Number too small" when the given input CC is less than 100.
+
+Include a function named findMileage(int cc) whose return type is an integer, which is the mileage.
+
+Sample Input 1:
+1
+
+Sample Output 1:
+Number too small
+
+Sample Input 2:
+160
+
+Sample Output 2:
+50
+
+
+
+
+
+
+
+	

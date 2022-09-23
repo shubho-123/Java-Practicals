@@ -1,0 +1,11 @@
+1.write +ve and -ve test cases to check a method checkAge() age>=18,true
+2.write +ve and -ve test cases to check login(), username="admin" and password="admin123"
+
+
+/***
+2.Create a SalesPerson class, and calculate commission according to sales
+if sales>=90	commission: 20% of the salary
+if sales>=80	commission: 10% of the salary
+if sales>=70 	commission: 5% of the salary
+below 70	no commission
+***/

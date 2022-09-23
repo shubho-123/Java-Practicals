@@ -1,0 +1,53 @@
+
+Q.1
+Person(id,name,dob) <- Employee(workingDays,perDay,salary) <- SalesPerson(sales,commission)
+
+if sale 95% then commission 20% of salary
+		90% then commission 15% of salary
+		80% then commission 10% of salary
+		75% then commission 5% of salary
+		
+		calculate commision and total salary
+
+
+Q.
+Person <- Customer(prodName,quantity, price, billAmount) <- Discount 
+
+	if billAmount is 20000 or greater than then 15% discount on billAmount
+				15000 or more then 10% discount on billAmount
+				10000 or more then 7% discount on billAmount
+				below 10000 no discount.
+				
+				calculate discount and final bill.
+				
+				
+
+Q.
+Read the question carefully and follow the input and output format.
+
+In a given input number , find out the factorial of each individual digit and assign it to output array.
+
+Input and Output Format:
+Input consists of a single integer. Output consists of an Integer array, the individual factorials.
+
+Print "Number too large" when the given input numbers is greater than 32767 .
+Print "Number too small" when the given input is a negative number.
+
+Include a function named digitFactorial(int number) whose return type is void.
+The output array is stored in a global variable named factorial.
+
+Sample Input 1:
+123
+
+Sample Output 1:  
+1
+2
+6
+
+
+Sample Input 2:
+-2526
+
+Sample Output 2:
+Number too small
+				

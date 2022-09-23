@@ -1,0 +1,121 @@
+Software testing:
+- to avoid any failure
+- we need to identify faults, it means process of discovering the causes of failure
+- it is the process of ensuring that the failure does not happen again, known as fault correction or fault removal
+- To test our programming. we'll use JUnit Testing Framework
+
+ What is JUnit?
+ - In java, the standard unit testing framework is known as JUnit.
+ - it is an open-source framework
+ - programmer can create test-cases and test his/her own code
+ - to perform unit testing, we need to create test cases
+ - unit test is a code which ensures that the program logic works as expected
+ 
+ Features of JUnit:
+ - framework which is used for writing and running test cases
+ - provides annotations to identify test methods
+ - provides assertions for testing expected output
+ - it provides test runners for running tests
+ - it allows you to write code faster which increases quality
+ - it is simple,less complex, and takes less time
+ - JUnit test can run automatically and they check their own results and provides immediate feedback
+ - JUnit test can be categorized into test Suites containing test cases and even other test suites
+ - it shows test progress in a bar that is green if test is running smoothly, it turns red when test fails
+ 
+ what is unit test case?
+ - A unit test case is a part of code which ensures that another part of code(method) works as expected
+ - To achieve a desire result quickly, a test framework is required and JUnit is perfect test framework for java
+ - a formal written test case is characterized by a known input and expected output
+ - there must be atleast 2 unit test cases, 1 +ve test case and 1 -ve test case
+ 
+1.write +ve and -ve test cases to check a method checkAge() age>=18,true
+2.write +ve and -ve test cases to check login(), username="admin" and password="admin123"
+ 
+ 
+ public boolean login()
+ {
+ 	if(getUserName().equals("admin")&& getPassword().equals("admin123"))
+ 		return true;
+ 	else
+ 		return false;
+ }
+ 
+ Assertion:
+ - all assertion methods are present in Assert class
+ - Assert class provides a set of assert methods which are useful for writing test cases.
+ 
+ 1.void assertEquals(boolean expected,boolean actual): checks two primitives/objects are equal or not
+ 2.void assertTrue(boolean condition): it checks that a condition is true
+ 3.void assertFalse(boolean condition): it checks if condition is false
+ 4.void assertNotNull(Object obj): checks that an object is not null
+ 5.void assertNull(Object obj): checks that an object is null
+ 6.void assertSame(Object obj1,Object obj2): tests if two object references point to the same object
+ 7.void assertNotSame(Object obj1,Object obj2):tests if 2 obj references do not point to the same object
+ 8.void assertArrayEquals(expectedArray,actualArray): tests 2 arrays are equal to each other
+ 
+  Annotation: 
+  - describe the functionality in which you can add your code and apply that in a method or a class
+  - JUnit annotations provides the following information about test methods:
+  		1.which methods are going to run before and after test methods
+  		2.which methods run before and after all the methods
+  		3.which methods or classes will be ignored during the execution
+  		
+ 1.@Test: it tells JUnit that method to which it is attached can be run as a test case 
+ 2.@Before: annotating a method with @Before causes that method to be run before the test method
+ 3.@After: annotating a method with @After causes that method to be run after the test method
+ 4.@BeforeClass: annotating a method with a @BeforeClass causes it to be run once before any of the test method in the class
+ 5.@AfterClass: this will perform the method after all tests have finished, this can be used for cleanup activities
+ 6.@Ignore:  used to ignore the test and that test will not be executed
+  
+  
+  
+  ************************************************************************
+  ##Project
+  core java mini projects:  
+Library Mgmt System
+Hotel Mgmt system
+Hospital Mgmt System
+Student Information System
+ATM Machine
+Salary Magmt System
+Career Information Mgmt System
+Course Mgmt System
+Event Mgmt System
+Electricity Billing System
+Book store Mgmt
+Medical Mgmt system
+Stock Mgmt system
+Telephone Billing System
+Travel Mgmt System
+Campain Mgmt System
+University Admission Mgmt System
+Content Mgmt System
+Student Result Processing system
+Labour Mgmt system
+school mgmt system
+  
+  
+  -only console application, no database, on GUI
+  -follow all the naming convention otherwise you'll get zero mark.
+  -include oops, collection, handle exception(try to use custom exception)
+  -
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

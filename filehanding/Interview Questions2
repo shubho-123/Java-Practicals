@@ -1,0 +1,62 @@
+1.What is OOP? and principles of oop/ 4 major pillors?
+2.Why Java is platform independent?
+3.Why main() is static?
+4.instead of public static void main() can I write static public void main()
+5.Can we change variable name of command line arguments? can I write a instead of args?
+6.Can I change return type of main()?/ can I write int instead of void in main()?
+7.What is System, out and println in System.out.println()?
+8.Can we make class as a private or protected?
+9.Is Java 100%/pure OOP language?
+10.What is variable?
+11.What are data types?
+12.What are the types of variables?
+13.How to display below number upto 2 decimal point
+  float a = 123.768912
+14.What is class?
+15.what is object?
+16.What are the advantages of creating a method?
+17.What is constructor?
+18.What is difference between method and constructor?
+19.What is this keyword?
+20.What is this() constructor?
+21.What is super keyword?
+22.What is super() constructor?
+23.what is difference between super keyword and super()?
+24.What is Method Overloading?
+25.What is Method Overriding?
+26.What is difference between Method Overloading and Overriding?
+27.What is inheritance and explain it's types
+28.Why java doesn't support multiple inheritance
+29.What is difference between HAS-A and IS-A Relationship?
+30.What is package and subpackages?
+31.Can we import same package twice?
+32.What is default package of java?
+33.Can I write package stmt after import stmt?
+34.what is final keyword?
+35.what is static keyword?
+36.Can we execute a program without main()?
+37.In which memory area variable will be store?
+38.In which memory area object will be store?
+39.static variables will store in which memory area?
+40.Can we use this and super keyword in static context?
+41.Can we reuse static method? if yes how?
+42.Can we overload static method?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

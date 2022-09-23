@@ -1,0 +1,238 @@
+1.What is OOP? and principles of oop/ 4 major pillors?
+2.Why Java is platform independent?
+3.Why main() is static?
+4.instead of public static void main() can I write static public void main()-->yes
+5.Can we change variable name of command line arguments? can I write a instead of args?-->yes
+6.Can I change return type of main()?/ can I write int instead of void in main()?
+7.What is System, out and println in System.out.println()?
+8.Can we make class as a private or protected?
+9.Is Java 100%/pure OOP language?
+10.What is variable?
+11.What are data types?
+12.What are the types of variables?
+13.How to display below number up to 2 decimal point
+  float a = 123.768912
+14.what is class?
+15.what is object?
+16.what is constructor?
+17.what the advantage of creating method?
+18.what is difference between method and Constructor?
+19.what is "this." keyword?
+20.what is "this()" constructor?
+21.what is "super" keyword?
+22.what is "super()" constructor?
+23.what is difference between super keyword and super() Constructor?
+24.what is method overloading?
+25.what is method overriding?
+26.what is difference between method overloading and overriding?
+27.what is inheritance and explain it's type?
+28.why java does not support multiple inheritance?
+29.What is the different between has-a and IS-a?
+30.What is Package and SubPackages?
+31.Can we import same package twice?
+32.what is default package is Java?--> java.lang
+33.can I write package statements after import statement?
+34.what is final keyword?
+35.what is static keyword?
+36.can we execute a program without main()?--->yes if previous version of java jdk7 like in jdk6.1 we can but after jdk7 version it's compulsery to put main() in java.
+37.In which memory area variables will store?-->stack m/r
+38.In which memory area object will store?-->heap m/r
+39.In which memory area static variables will store?-->class area
+40.can we use this and super keyword in static context?
+41.Can we reuse static method? if yes how?
+42.Can we overload static method?
+43.Difference between String and StringBuffer?
+44.Difference between StringBuffer and String Builder?
+45.How to Create a String?
+46.what is Abstract Class?
+47.what is an Interface?
+48.Difference between Abstract class and Interface?
+Difference between default and protected?
+
+49.What is Exception?
+50.what is the need to handle the exception?
+51.What is the base class of Exception?
+52.what are the types of Exception?
+53.Can we insert multiple catch block?
+54.what is the order of multiple catch block?
+55.What is the use of finally block?
+
+56.What is Final,finally? 
+---final is a keyword used as access modifier in Java with variable,method,class.
+---finally is a block in Java used for Exception Handing.
+---finalized is a method in Java used for Garbage Collection.
+
+57.In which situation finally will not be executed?
+
+58.which Exception should be decleared ?
+ans--> checked Exception
+
+59.can we rethrow an exception? yes
+        //try{
+  			.......
+			....
+			}
+			catch(Exception e)
+				{
+				throw new Exception("");
+				}
+				
+60.what is the Difference between throw and throws?
+  ans-->throw is used to explicitly throw an Exception
+  	--->throw is used within the method,throws is used within the method signature
+  -you can not throw multiple Exception, you can declrear multiple Exception. IoException 
+  
+61.what is custom / user defined Exception?
+62.how to create custom Exception?
+63.What is Collection?
+64.What are the advantages of collection over array 
+vs
+65.Disadvantages of array?
+
+66.what is the default capacity of arrayList?-->10
+67.what is the use of Iterator interface? to iterate the array to forward direction.
+68.What is Generic?
+69.what is difference Between ArratList And LinkedList?
+70.what is difference between Iterator and ListIterator?
+71.What is difference between ArrayList and Vector?
+72.What is difference between Comparable and Comparator?
+73.What is difference between Collection and Collections?
+74.what is different between list vs Set?
+List:
+-It fllowes Insertion order
+-It can store Duplicate elements
+Set:
+-insertion order is not preserved
+-it can't store duplicate elements
+75.what is different between LinkedHashSet, TreeSet and HashSet ?  
+75.what is different between LinkedHashSet and HashSet?
+75.what is different between HashSet and LinkedHasSet ?
+76.what is different between PriorityQueue and ArrayDeque?
+77.what is different between Set And Map?
+78.what is different between HashSEt HashMAp?
+79.what is different between HashMap and Hashtable ?
+80.how to get synchronized version of ArrayList/LinkedList ?
+   Asn. By using Synchronized(List list)of collections Class
+   
+81.what is different between Array and ArrayList?
+82.What is the use of properties class?
+8. What are the Types of file?
+84.what is different between byte oriented and character oriented file?
+85.what is serialization and Deserialization ?
+86.What is Multi-Processing?
+87.What is Multi-Threading?
+88.what is Thread?
+89.What is different between process and Thread?
+90.how to Create a Thread?
+91.Thread vs Runnable which is the best approach to create a thread?
+92.Explain Thread Life-Cycle?
+93.Can we start a thread twice? 
+ans== no, otherwise you will get IllegalThreadStateException.
+94.can we set priority of thread? if Yes how ?
+95.what will happen if I pass a priority value other then (1 to 10 )? compilation error 
+96.What is Synchronization?
+103.What is task scheduler?
+97.What are the types of threads?
+98.can you change user thread into Daemon Thread? Daemon threads are background supporting threads
+99.what is Inter-Thread Communication/Co-operation ?
+100.What is different between notify() and notifyAll()?
+101.why wait() , notify() ,notifyAll() are present in Object class and not in a Thread Class?
+and..All these methods are related to lock and Object has lock.
+102.What is different between sleep() and wait()?
+103.What is deadlock?
+ans-->
+ans.Deadlock can occur in a situation when a thread is waiting for an object lock that is acquire by another thread. And 2nd thread is waiting for 
+	an object lock that is acquire by 1st thread. Both threads are waiting for each other to release the lock. This condition is known as deadlock.
+104.What is the use of join()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+114.What is garbage collector?
+115.How to call garbage collector explicitly?
+ans. System.gc() / Runtime.gc()
+116.What is software testing?
+117.What is unit testing?
+118.What is test case?
+119.What are the advantages/features of unit testing?
+120.What is difference between manual and automated testing
+121.Explained Annotations used in JUnit?
+122.What is assertion/assertion methods
+123.assertion methods are defined in which class?
+124.What are the new features which got introduced in Java8?
+125.What is lambda expression?
+126.What is Functional Interface?
+127.How lambda expression and functional interface are related?
+128.Can you create your own functional interface?
+129.What is method reference in java?
+130.What is Optional? Why and how can you use it?
+131.What is Stream?
+132.What is difference between Collection and Stream?
+ans. collection: use to hold the date it is easy,execution slow for large data,serial execution,we can perform single operation at a time.
+     Stream: ues for execution purpose it is easy, execution fast for large data also, parallal execution,we can perform multiple operation at a time.
+133.What is difference between intermediate and terminal operation in stream?
+ans. 1>intermediate operations are lazy in nature and do not execute immediately, Terminal operations are not lazy and they executed as soon as encountered.
+     2>All intermediate operations returns stream as it just transform stream into another, terminal operation don't.
+     3>filter() is an intermediate operation, 
+	count() is terminal operation
+134.What are the issues/limitation of old Date/Time API?
+135.Why constructor overriding is not possible?
+136.is default keyword one of the access-modifier?
+ans. no, see ex. in instance variable.//int n; we are not specifing acces modifier but it is default
+	but you use default in Interface as default methods
+137.What is Different between protected and default?
+ans. see chat in notes.
+
+
+
+
+
+
+
+
+
+MySQL:
+1.What is Database ?
+2.What is DBMS?
+3.What is RBMS? and how is it different from DBMS?
+4.What is SQL?
+5.What is Difference between SQL and MySQL?
+6.What are table and fields?
+7.What is 
+
+
+12.What is Query and Subquery?
+13.What is Difference between drop and truncate?
+14.What is Difference between Delete and truncate?
+15.What are Aggregate functions?
+16.What is index? and explain it's types
+17.What is Difference between clustered and non-clustered?
+18.What is pattern matching?
+19.What are some common clauses used with select query?
+20.What is Difference between Store procedure and function?
+21.What is Trigger?
+
+
+JDBC:
+1.What is JDBC?
+2.What are the steps to connect java and Database?
+3.What are the different types of JDBC driver?
+4.What is Difference between Statement and PreparedStatement?
+5.What is the use of CallableStatement?
+6.Which method id used to establish connection between java and database?
+7.What is Difference between executeQuery() and executeUpdate() and execute()?
+8.What are the benefits of PreparedStament over Statement?
+9.
+
+	

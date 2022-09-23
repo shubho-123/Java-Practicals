@@ -1,0 +1,385 @@
+				        	**JUnit Theory**
+# Software testing:
+
+-we need S/W testing to avoid any failure.
+
+- we need to identify faults,it means process of discovering the causes 
+  of failure.
+- it is the process of ensuring that the failure does not happen again,
+  known as fault correction or fault removal
+  
+- To test our programming. we'll use JUnit Testing Framework
+test case:
+
+for each and every method() we will write +ve test case
+									and   -ve test case
+			number  5   +ve test case = n = number 
+			number  a   -ve test case = n = number 
+								(getting error)
+
+
+ # What is JUnit?
+
+ - In java, the standard unit testing framework is known as JUnit.
+
+ - it is an open-source framework
+
+ - programmer can create test-cases and test his/her own code
+
+ - to perform unit testing, we need to create test cases
+
+ - unit test is a code which ensures that the program logic works as expected
+	(we learn JUnit4 version)
+ 
+ 
+ # Features of JUnit:
+
+ - it is a framework which is used for writing and running test cases
+
+ - it provides annotations to identify test methods
+ 		(@Test , @Befor , @After)
+
+ - provides assertions for testing expected output
+ 	(Assert is a inbuilt class and so many methods)
+ 	
+ 		--assertEquals(Expected o/p, Actual o/p)
+ 			
+ 		--assertEquals(Expected o/p, Actual o/p)
+ 			
+ 		--assertFalse()
+
+ - it provides test runners for running tests
+
+ - it allows you to write code faster which increases quality
+
+ - it is simple,less complex, and takes less time
+
+ - JUnit test can run automatically and they check their own results
+   and provides immediate feedback
+
+ - JUnit test can be categorized into test Suites containing(multiple) 
+ 	test cases and even other test suites
+ 		Square test			Age 
+ 		{					{
+ 		//-------			//
+ 		}					}
+ 			Test Suites
+
+ - it shows test progress in a bar that is green if test is running 
+   smoothly, it turns red when test fails
+
+ 
+ # what is unit test case?
+
+ - A unit test case is a part of code which ensures that another part of 
+   code(method()) works as expected
+
+ - To achieve a desire result quickly, a test framework is required and 
+   JUnit is perfect test framework for java
+
+ - a formal written test case is characterized by a known input and 
+   expected output
+
+ - there must be atleast 2 unit test cases,
+ 	 1 +ve test case 
+ 	 2 -ve test case
+ 	 package junit;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+@RunWith(Suite.class)
+@SuiteClasses({ TestAdminPassword.class, TestAge.class, TestApple.class, TestConuntA.class, TestSquare.class })
+public class AllTests {
+
+}
+-----------------------------------------------------------------------------
+[ 1.write +ve and -ve test cases to check a method checkAge() age>=18,true ]
+
+package junit;
+
+public class Age {
+
+	private int age;
+	
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public boolean checkAge()
+	{
+		if(age>=18)           //testCorrect() obj.setAge(18);-->true  //testWrong()  obj.setAge(17);--->false
+		return true;
+		else
+		return false;
+	}
+}
+------------------
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAge {
+
+	@Test
+	public void testCorrect() {
+		Age obj=new Age();
+		obj.setAge(18);
+		assertTrue(obj.checkAge()); //obj.checkAge() returns True then it give ture
+	}
+	@Test
+	public void testWrong() {
+		Age obj=new Age();
+		obj.setAge(17);
+		assertFalse(obj.checkAge()); //obj.checkAge() returns false then it give ture
+	}
+}
+
+ [ 2.write +ve and -ve test cases to check login(), username="admin" and password="admin123" ]
+ 
+package junit;
+
+public class AdminPassword {
+	
+	private String username, password;
+
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public boolean checkAdminPassword()
+	{ 
+		if(getUsername().equals("admin") && getPassword().equals("admin123"))   //never use == for String; use equals()
+			return true;
+		else 
+			return false;
+	}
+}
+
+ public boolean login()
+ {
+	if(getUserName().equals("admin")&& getPassword().equals("admin123"))
+	return true;
+ 	else
+ 	return false;
+ }
+ -------------------------
+ package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAdminPassword {
+
+	@Test
+	public void testCorrectUser() {
+		AdminPassword obj=new AdminPassword();
+		obj.setUsername("admin");
+		obj.setPassword("admin123");
+		assertTrue(obj.checkAdminPassword());
+	}
+
+	@Test
+	public void testWrongUser() {
+		AdminPassword obj=new AdminPassword();
+		obj.setUsername("Shubhendu");
+		obj.setPassword("admin1234");
+		assertFalse(obj.checkAdminPassword());
+	}
+}
+-------------------------------------------------------------------------
+				    	##  JUnite Core ##
+ * JUnitCore is a inbuilt class
+ - you can execute all the code/class at a time
+ - it contain runClasses(className1.class,className2.class,.....)
+ 
+ 	Return Type			(as many classes you can pass to test)
+ 	  result
+ - Result result=JUnitCore.runClasses(ClassName.class)
+ 	(return type)
+ - It contains run classes(single class or as many you can pass)
+ 
+ * for retrieve failure we need another inbuilt class.
+ 	That is Failure Class
+ - It holds a description of the failed test and the exception that was 
+ 	thrown while running it.
+ 	
+ 	Result = is holding the failure data
+    getFailures(): used to retrieve all the failure messages from the result
+
+EX:
+	for(Failure failure: result.getFailures())
+	{
+	S.O.P(failure);
+	}
+------------------------------
+ package junit;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+/*JUnitCore : it contains runClasses() in which you can pass test case classes,
+it will execute test case and you will get a result if test is passed or failed*/
+//Result: hold result of test cases whether test case is pass or not.
+
+//getFailures() : used to retrieve all the Failure messages from the result
+
+//Failure class : holds the description of failed test
+
+public class TestRunner {
+
+	public static void main(String[] args) {
+		
+	//	Result result= JUnitCore.runClasses(TestSquare.class,TestConuntA.class,TestApple.class,TestAge.class);
+	//	Result result= JUnitCore.runClasses(TestAge.class); // Individual checking;
+		
+		Result result= JUnitCore.runClasses(TestSalesPerson.class);
+		
+		
+	//	Result result= JUnitCore.runClasses(TestAdminPassword.class);
+		for (Failure failure : result.getFailures()) 
+		{
+			System.out.println(failure);
+		}
+		System.out.println(result.wasSuccessful());
+	}
+
+}
+
+-------------------------------------------------------------------------
+# Assertion:
+(means methods inside Assert Class)
+
+ - all assertion methods are present in Assert class
+
+ - Assert class provides a set of assert methods which are useful for 
+   writing test cases.
+
+
+ 1.void assertEquals(boolean expected,boolean actual): checks two 
+   primitives/objects are equal or not
+
+ 2.void assertTrue(boolean condition): it checks that a condition is true(+ve)
+
+ 3.void assertFalse(boolean condition): it checks if condition is false(-ve)
+
+ 4.void assertNotNull(Object obj): checks that an object is not null
+
+ 5.void assertNull(Object obj): checks that an object is null
+
+ 6.void assertSame(Object obj1,Object obj2): tests if two object references 
+   point to the same object
+   ->returns true then get green bar
+
+ 7.void assertNotSame(Object obj1,Object obj2):tests if 2 obj references do 
+   not point to the same object
+    ->returns true then get red bar
+
+ 8.void assertArrayEquals(expectedArray,actualArray): tests 2 arrays are 
+   equal to each other
+   												 (Store in)
+ (*)  String str1 = new String("Welcome");  	  heap m/r
+ 	  String str2 = "Hello";				string constraint pool 
+
+
+
+
+------------------------------------------------------------------------
+# Annotation: 
+
+  - describe the functionality in which you can add your code and apply that 
+    in a method or a class
+
+  - JUnit annotations provides the following information about test methods:
+
+  		1.which methods are going to run before and after test methods
+  		
+  [ before executing any test case if we want to connect my java code to database
+  	after executing test case if we want to disconnect my code from database]
+  		
+  		2.which methods run before and after all the methods
+
+  		3.which methods or classes will be ignored during the execution
+
+
+ 1.@Test:
+   it tells JUnit that method to which it is attached can be run as 
+   a test case 
+
+ 2.@Before:
+   annotating a method with @Before causes that method to be run 
+   before the test method
+
+ 3.@After: 
+   annotating a method with @After causes that method to be run 
+   after the test method
+
+ 4.@BeforeClass:
+   annotating a method with a @BeforeClass causes it to be 
+   run once before any of the test method in the class
+    [it will execute before @Before]
+
+ 5.@AfterClass:
+   this will perform the method after all tests have finished, 
+   this can be used for cleanup activities
+
+ 6.@Ignore:
+   used to ignore the test and that test will not be executed
+   -------------------------------------------------------------------
+   
+   *) if you are using @BeforeClass And @AfterClass annotation so
+    method must be static method
+    
+    
+package junit;
+import org.junit.After;
+
+public class TestAnnotations {
+
+	@Test
+	public void test() {
+		System.out.println("in Test");
+	}
+	
+	@BeforeClass
+	public static void beforClass() {
+		System.out.println("in beforClass");
+	}
+	
+	@AfterClass
+	public static void afterClass() {
+		System.out.println("in afterClass");
+	}
+	
+	@Before
+	public void befor() {
+		System.out.println("befor");
+	}
+	
+	@After
+	public void after() {
+		System.out.println("after");
+	}
+	
+	@Ignore
+	public void ignore() {
+		System.out.println("ignore");
+	}
+}
